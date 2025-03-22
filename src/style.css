@@ -1,0 +1,55 @@
+body{
+    font-family: sans-serif;
+    padding: 0;
+
+}
+:root{
+    --btn:#dbdbdb;
+    --btn-hover:#c4c4c4;
+    --item-bg:#f0f0f0;
+    --modal-bg:rgba(141, 141, 141, 0.541);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header>button{
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background-color: var(--btn);
+}
+.header>button:hover{
+    background-color: var(--btn-hover);
+}
+.employees{
+    display: flex;
+}
+.employees>div{
+   border: .1rem solid #dbdbdb;
+   overflow-y:scroll ;
+   height: 45rem;
+}
+.employees .employees__names{
+    width: 30%;
+}
+.employees .employees__single{
+    width: 70%;
+}
+.employees__names,
+.employees__single{
+padding: 1rem;
+display: flex;
+flex-direction: column;
+}
+.employees__names--title,
+.employees__single--title{
+    padding-bottom: 1rem;
+    margin-bottom: .5rem;
+    text-align: center ;
+    border-bottom: .1rem solid #dbdbdb;
+}
