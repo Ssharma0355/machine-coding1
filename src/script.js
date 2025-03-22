@@ -7,7 +7,7 @@
   let selectedEmployeeId = employees[0]?.id || null;
   let selectedEmployeeObj = employees[0] || {};
 
-  const employeeList = document.querySelector(".employees__names--list");
+  const employeeList = document.querySelector(".employees__names--list"); //targeting the dom
   const employeeDetails = document.querySelector(".employees__single--names");
 
   // Function to render employees
@@ -23,7 +23,7 @@
       if (parseInt(selectedEmployeeId, 10) === emp.id) {
         employee.classList.add("active");
         selectedEmployeeObj = emp;
-        displayEmployeeDetails();
+        // displayEmployeeDetails();
       }
 
       employee.addEventListener("click", () => {
@@ -41,6 +41,8 @@
       employeeDetails.innerHTML = `
                 <h2>${selectedEmployeeObj.name}</h2>
                 <p>ID: ${selectedEmployeeObj.id}</p>
+                <p>Age: ${selectedEmployeeObj.age}</p>
+                <p>Hi</p>
             `;
     }
   };
